@@ -20,6 +20,11 @@
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -206,7 +211,7 @@
                         forma natural y mejora con cada interacción.</p>
                 </a>
                 <a href="#" class="portfolio-item" target="_blank">
-                    <img src="image/pos.png" alt="Sistema de Punto de Venta" class="imagenportafolio" >
+                    <img src="image/pos.png" alt="Sistema de Punto de Venta" class="imagenportafolio">
                     <span class="portfolio-tag">POS</span>
                     <h3>Sistema de Punto de Venta</h3>
                     <p>Sistema integral de gestión de ventas con control de inventario, procesamiento de pagos y
@@ -305,7 +310,8 @@
                                     <circle cx="4" cy="4" r="2" />
                                 </svg>
                             </a>
-                            <a href="https://github.com/JuanMalaver1511" class="team-link" aria-label="GitHub" target="_blank">
+                            <a href="https://github.com/JuanMalaver1511" class="team-link" aria-label="GitHub"
+                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -332,14 +338,16 @@
                         <p class="team-bio">Especialista en arquitecturas cloud y sistemas distribuidos. Convierte
                             visiones complejas en productos sólidos y mantenibles.</p>
                         <div class="team-links">
-                            <a href="https://www.linkedin.com/in/jairgaona/" class="team-link" aria-label="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/jairgaona/" class="team-link" aria-label="LinkedIn"
+                                target="_blank">
                                 <svg viewBox="0 0 24 24">
                                     <path
                                         d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                                     <circle cx="4" cy="4" r="2" />
                                 </svg>
                             </a>
-                            <a href="https://github.com/jair200008" class="team-link" aria-label="GitHub" target="_blank">
+                            <a href="https://github.com/jair200008" class="team-link" aria-label="GitHub"
+                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -353,7 +361,7 @@
                 <!-- Co-Founder -->
                 <div class="team-card">
                     <div class="team-photo-wrapper">
-                        <img src="/image/Jua.jpeg" alt="Foto de Juan Sebastian Suárez" class="team-photo"
+                        <img src="image/sebas.jpeg" alt="Foto de Juan Sebastian Suárez" class="team-photo"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                         <div class="team-photo-fallback" style="display:none;">CF</div>
                     </div>
@@ -366,14 +374,16 @@
                         <p class="team-bio">Diseñador de producto y estratega de negocio. Garantiza que cada entrega
                             tenga el nivel de calidad y la experiencia que los usuarios merecen.</p>
                         <div class="team-links">
-                            <a href="https://www.linkedin.com/in/sebas-suarez/" class="team-link" aria-label="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/sebas-suarez/" class="team-link" aria-label="LinkedIn"
+                                target="_blank">
                                 <svg viewBox="0 0 24 24">
                                     <path
                                         d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                                     <circle cx="4" cy="4" r="2" />
                                 </svg>
                             </a>
-                            <a href="https://github.com/Jsebas280" class="team-link" aria-label="GitHub" target="_blank">
+                            <a href="https://github.com/Jsebas280" class="team-link" aria-label="GitHub"
+                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -470,6 +480,20 @@
     </footer>
 
     <script src="functions/function.js"></script>
+    <script>
+    // Menú hamburger móvil
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle?.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+</script>
 </body>
 
 </html>
