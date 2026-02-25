@@ -271,7 +271,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="section-title">
+            <h2>Nuestros clientes</h2>
+            <p>Metodología ágil probada en cientos de proyectos</p>
+        </div><br>
+
+        <div class="carrusel-wrapper">
+            <button class="carrusel-btn" id="prev" aria-label="Anterior">&#8592;</button>
+
+            <div class="carrusel-viewport">
+                <div class="carrusel-track" id="track">
+                    <div class="cliente"><img src="clients/emmi.png" alt="Logo Cliente 1"></div>
+                    <div class="cliente"><img src="clients/emmi.png" alt="Logo Cliente 2"></div>
+                    <div class="cliente"><img src="clients/emmi.png" alt="Logo Cliente 3"></div>
+                    <div class="cliente"><img src="clients/emmi.png" alt="Logo Cliente 4"></div>
+                    <div class="cliente"><img src="clients/emmi.png" alt="Logo Cliente 5"></div>
+                    <!-- Agrega más clientes aquí si necesitas -->
+                </div>
+            </div>
+
+            <button class="carrusel-btn" id="next" aria-label="Siguiente">&#8594;</button>
+        </div>
+
+        <div class="carrusel-dots" id="dots"></div>
+
     </section>
+
 
     <!-- ══════════════════════════════════════════
          SECCIÓN EQUIPO
@@ -482,19 +508,19 @@
 
     <script src="functions/function.js"></script>
     <script>
-    // Menú hamburger móvil
-    const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+        // Menú hamburger móvil
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-    toggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
+        toggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
 
-    // Cierra el menú al hacer clic en un enlace
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-</script>
+        // Cierra el menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
 </body>
 
 </html>
